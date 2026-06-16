@@ -118,6 +118,14 @@ Route::get('/profile', function () {
 
 ---
 
+## Before vs After
+
+| Before | After |
+|---------|---------|
+| <img src="https://github.com/user-attachments/assets/906ad545-d9a0-4aad-85ad-8dcbd9c1d5e3" width="100%"> | <img src="https://github.com/user-attachments/assets/a0191b26-b86b-483a-ba07-699792840db5" width="100%"> |
+
+---
+
 ## Testing
 
 ```bash
