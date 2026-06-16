@@ -19,17 +19,17 @@
     "require": {
         "php": "^8.2.0",
         "ext-zlib": "*",
-        "illuminate/http": "^11.0|^12.0",
-        "illuminate/support": "^11.0|^12.0"
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.18.1",
-        "orchestra/testbench": "^9.8|^10.0",
-        "pestphp/pest": "^3.7",
-        "pestphp/pest-plugin-type-coverage": "^3.1",
-        "phpstan/phpstan": "^1.12.7",
-        "rector/rector": "^1.2.8",
-        "symfony/var-dumper": "^7.1.6"
+        "laravel/pint": "^1.29",
+        "orchestra/testbench": "^9.8|^10.0|^11.0",
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-type-coverage": "^3.6",
+        "phpstan/phpstan": "^2.2",
+        "rector/rector": "^2.4",
+        "symfony/var-dumper": "^7.1.6|^8.1"
     },
     "autoload": {
         "psr-4": {

@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 final class CompressResponse
 {
     /**
-     * Handle an incoming request.
+     * @param  Closure(Request): Response  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
@@ -26,8 +26,8 @@ final class CompressResponse
         }
 
         return match (config('response-compression.algorithm')) {
-            'gzip' => $response = app(GzipEncoder::class)->handle($response),
-            'br' => $response = app(BrotliEncoder::class)->handle($response),
+            'gzip'  => app(GzipEncoder::class)->handle($response),
+            'br'    => app(BrotliEncoder::class)->handle($response),
             default => $response,
         };
     }

@@ -18,8 +18,8 @@ final class GzipEncoder implements Encoder
 
             $response->headers->add([
                 'Content-Encoding' => 'gzip',
-                'Vary' => 'Accept-Encoding',
-                'Content-Length' => strlen($compressed),
+                'Vary'             => 'Accept-Encoding',
+                'Content-Length'   => strlen($compressed),
             ]);
         }
 

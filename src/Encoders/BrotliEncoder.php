@@ -11,8 +11,7 @@ final class BrotliEncoder implements Encoder
 {
     public function handle(Response $response): Response
     {
-        if (extension_loaded('brotli') && is_callable('brotli_compress')) {
-
+        if (function_exists('brotli_compress')) {
             $compressed = brotli_compress((string) $response->getContent(), $this->level());
 
             if ($compressed) {
@@ -20,8 +19,8 @@ final class BrotliEncoder implements Encoder
 
                 $response->headers->add([
                     'Content-Encoding' => 'br',
-                    'Vary' => 'Accept-Encoding',
-                    'Content-Length' => strlen($compressed),
+                    'Vary'             => 'Accept-Encoding',
+                    'Content-Length'   => strlen($compressed),
                 ]);
             }
         }

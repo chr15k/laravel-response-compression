@@ -9,7 +9,7 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         $app['config']->set('response-compression.enabled', true);
         $app['config']->set('response-compression.algorithm', 'gzip');
